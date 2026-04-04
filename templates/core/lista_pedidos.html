@@ -13,7 +13,7 @@
         {% for pedido in pedidos %}
             <li>
                 Pedido # {{pedido.id}} - Estado: {{pedido.estado}} - Total: ${{pedido.total}} - Fecha: {{pedido.fecha_creacion}}
-                <a a href="{% url 'detalle_pedido' pedido.id %}"> Ver Detalles </a>
+                <a href="{% url 'detalle_pedido' pedido.id %}"> Ver Detalles </a>
             </li>
         {% endfor %}
 

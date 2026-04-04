@@ -21,6 +21,6 @@ urlpatterns = [
     path("",views.home, name = "home"),
     path("registro/", views.register_view, name="register"),
     path("dashboard/", views.dashboard, name="dashboard"),
-    path("pedidos/", views.lista_pedidos, name="lista-pedidos"),
+    path("pedidos/", views.lista_pedidos, name="lista_pedidos"),
     path("pedidos/<int:pedido_id>/",views.detalle_pedido, name="detalle_pedido"),
 ]

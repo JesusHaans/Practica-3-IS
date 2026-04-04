@@ -30,7 +30,7 @@ def lista_pedidos(request):
     return render(request, "core/lista_pedidos.html", context)
 
 @login_required
-def  detalle_pedido(request, pedido_id):
-    pedido  = get_object_or_404(Pedido, id = pedido_id, usuario = request.user)
+def detalle_pedido(request, pedido_id):
+    pedido = get_object_or_404(Pedido, id=pedido_id, usuario=request.user)
     context = {"pedido":pedido}
     return render(request, "core/detalle_pedido.html",context)
