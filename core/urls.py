@@ -22,5 +22,8 @@ urlpatterns = [
     path("registro/", views.register_view, name="register"),
     path("dashboard/", views.dashboard, name="dashboard"),
     path("pedidos/", views.lista_pedidos, name="lista_pedidos"),
+    path("pedidos/crear/", views.crear_pedido,name='crear_pedido'),
     path("pedidos/<int:pedido_id>/",views.detalle_pedido, name="detalle_pedido"),
+    path('pedidos/<int:pedido_id>/editar/', views.editar_pedido, name='editar_pedido'),
+    path('pedidos/<int:pedido_id>/cancelar/', views.cancelar_pedido, name='cancelar_pedido'),
 ]

@@ -34,6 +34,16 @@ class Pedido(models.Model):
     estado = models.CharField(max_length=20, choices=ESTADOS_PEDIDO, default='pendiente')
     total = models.DecimalField(max_digits=10, decimal_places=2, default=0)
 
+    def puede_modificarse(self):
+        if self.estado == 'pendiente':
+            return True
+        return False
+    
+    def puede_cancelarse(self):
+        if self.estado == 'pendiente':
+            return True
+        return False
+
     def __str__(self):
         return f'Pedido #{self.id} - {self.usuario.username}'
     

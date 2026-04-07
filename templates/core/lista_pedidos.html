@@ -7,6 +7,13 @@
 {% block content %}
 
 <h1>Lista de Pedidos</h1>
+
+    {% if messages %}
+        {% for message in messages %}
+            <p>{{ message }}</p>
+        {% endfor %}
+    {% endif %}
+
 {% if pedidos %}
     <ul>
 
@@ -21,5 +28,7 @@
 {% else %}
     <p> No tienes pedidos registrados. </p>
 {% endif %}
+
+<p><a href="{% url 'crear_pedido' %}">Crear nuevo pedido</a></p>
 
 {% endblock %}
